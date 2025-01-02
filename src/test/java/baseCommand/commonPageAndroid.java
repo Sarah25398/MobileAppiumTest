@@ -31,7 +31,7 @@ public class commonPageAndroid {
     }
 
     public void waitForElementToVisible(String xpath) {
-        FluentWait<AndroidDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(10)).pollingEvery(Duration.ofSeconds(1));
+        FluentWait<AndroidDriver> wait = new FluentWait<>(driver).withTimeout(Duration.ofSeconds(15)).pollingEvery(Duration.ofSeconds(1));
         wait.until(ExpectedConditions.presenceOfElementLocated(AppiumBy.xpath(xpath)));
     }
 

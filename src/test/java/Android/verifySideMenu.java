@@ -7,8 +7,9 @@ import java.net.URISyntaxException;
 
 public class verifySideMenu extends commonPageAndroid {
     commonPageAndroid command = new commonPageAndroid();
-
-    public void sideMenuItemVerify() {
+   @Test
+    public void sideMenuItemVerify() throws URISyntaxException {
+       command.startAndroidApp();
         command.clickAndroidElementByXpath("//android.widget.ImageButton[@content-desc=\"App\"]\n");
         String[] menuItems = {"New Arrivals", "Sale", "Filter", "My Account", "Cart", "Notifications", "Share App", "Info", "Social", "Contact Us"};
         for (String menuItem : menuItems) {
